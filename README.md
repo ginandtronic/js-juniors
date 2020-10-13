@@ -1,1 +1,1 @@
-# js-juniors
+# JS Projekti Za Junior Programere
