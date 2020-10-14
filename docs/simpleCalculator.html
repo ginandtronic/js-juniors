@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Digitron</title>
+	<style>
+		#clear{
+			width: 90px;
+		}
+
+		.formstyle{
+			width: 150px;
+			height: 280px;
+			margin: auto;
+			padding: 10px;
+			border: 2px solid black;
+		}
+
+		input{
+			width: 40px;
+			padding: 6px;
+			margin: 3px;
+		}
+		#answerStyle{
+			width: 125px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="formstyle">
+		<form name="forms">
+			
+			<input type="text" name="answer" id="answerStyle"> <br> <br>
+
+			<input type="button" value=" 1 " onclick="forms.answer.value += '1' ">
+			<input type="button" value=" 2 " onclick="forms.answer.value += '2' ">
+			<input type="button" value=" 3 " onclick="forms.answer.value += '3' ">
+			<br>
+			<input type="button" value=" 4 " onclick="forms.answer.value += '4' ">
+			<input type="button" value=" 5 " onclick="forms.answer.value += '5' ">
+			<input type="button" value=" 6 " onclick="forms.answer.value += '6' ">		
+			<br>
+			<input type="button" value=" 7 " onclick="forms.answer.value += '7' ">
+			<input type="button" value=" 8 " onclick="forms.answer.value += '8' ">
+			<input type="button" value=" 9 " onclick="forms.answer.value += '9' ">
+			<br>
+			<input type="button" value=" + " onclick="forms.answer.value += '+' ">
+			<input type="button" value=" - " onclick="forms.answer.value += '-' ">
+			<input type="button" value=" * " onclick="forms.answer.value += '*' ">
+			<br>
+			<input type="button" value=" / " onclick="forms.answer.value += '/' ">
+			<input type="button" value=" 0 " onclick="forms.answer.value += '0' ">
+			<input type="button" value=" = " onclick="forms.answer.value = eval(forms.answer.value) ">
+			<br>
+			<input type="button" value="<-- " onclick="forms.answer.value = forms.answer.value.slice(0, -1) ">
+			<input type="button" value=" C " onclick="forms.answer.value = '' " id="clear">
+
+		</form>
+	</div>
+
+</body>
+</html>
