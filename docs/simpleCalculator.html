@@ -5,30 +5,55 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Simple Digitron</title>
 	<style>
-		#clear{
-			width: 90px;
+		body{
+			background: black;
+			color: silver;
 		}
-
+		#zaglavlje{
+			margin: auto;
+			width: 50%;
+			padding: 10px;
+		}
+		h1{
+			text-align: center;
+		}
+		#racunaj{
+			width: 90px;
+			border-color: grey;
+			background: blue;
+			color: white;
+		}
+		#obrisi{
+			border-color: grey;
+			background: red;
+			color: white;
+		}
 		.formstyle{
-			width: 150px;
-			height: 280px;
+			width: 148px;
+			height: 270px;
 			margin: auto;
 			padding: 10px;
-			border: 2px solid black;
+			border: 2px solid white;
+			border-radius: 6px;
+			background: #202020;
 		}
-
 		input{
 			width: 40px;
 			padding: 6px;
 			margin: 3px;
+			border:1px solid white;
+			border-radius: 2px;
 		}
 		#answerStyle{
 			width: 125px;
 		}
+
 	</style>
 </head>
 <body>
-
+	<div id="zaglavlje">
+		<h1>Prost Digitron</h1>
+	</div>
 	<div class="formstyle">
 		<form name="forms">
 			
@@ -47,15 +72,15 @@
 			<input type="button" value=" 9 " onclick="forms.answer.value += '9' ">
 			<br>
 			<input type="button" value=" + " onclick="forms.answer.value += '+' ">
-			<input type="button" value=" - " onclick="forms.answer.value += '-' ">
-			<input type="button" value=" * " onclick="forms.answer.value += '*' ">
-			<br>
-			<input type="button" value=" / " onclick="forms.answer.value += '/' ">
 			<input type="button" value=" 0 " onclick="forms.answer.value += '0' ">
-			<input type="button" value=" = " onclick="forms.answer.value = eval(forms.answer.value) ">
+			<input type="button" value=" - " onclick="forms.answer.value += '-' ">
 			<br>
-			<input type="button" value="<-- " onclick="forms.answer.value = forms.answer.value.slice(0, -1) ">
-			<input type="button" value=" C " onclick="forms.answer.value = '' " id="clear">
+			<input type="button" value=" * " onclick="forms.answer.value += '*' ">
+			<input type="button" value=" / " onclick="forms.answer.value += '/' ">
+			<input type="button" value="&#8676;" onclick="forms.answer.value = forms.answer.value.slice(0, -1) ">
+			<br>
+			<input id="obrisi" type="button" value=" C " onclick="forms.answer.value = '' ">
+			<input type="button" value=" = " id="racunaj" onclick="forms.answer.value = eval(forms.answer.value) ">
 
 		</form>
 	</div>
