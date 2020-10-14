@@ -4,7 +4,7 @@
 
 [![simple calculator image][1]][2]
 
-[1]: img/SimpleCalculator.png
+[1]: docs/img/SimpleCalculator.png
 [2]: https://milan-micic.github.io/js-juniors/simpleCalculator.html
 
 Najprostiji moguci digitron koji postoji,samo sa osnovnim operacijama.
