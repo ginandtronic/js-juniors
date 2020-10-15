@@ -8,4 +8,5 @@
 [2]: https://milan-micic.github.io/js-juniors/simpleCalculator.html
 
 Najprostiji moguci digitron koji postoji,samo sa osnovnim operacijama.
-## Test
+
+## 2. TODO List
