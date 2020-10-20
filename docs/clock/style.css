@@ -95,3 +95,10 @@ body{
 	height: 20%;
 	background-color: white;
 }
+
+@media(max-width: 568px){
+	.clock{
+		width: 280px;
+		height: 280px;
+	}
+}
