@@ -23,7 +23,7 @@ Ovo je prosta aplikacija bez koriscenja Local Storage da bi pamtila listu posle 
 ## 3. Analog Clock
 [Clock](https://milan-micic.github.io/js-juniors/clock)  
 
-[![clock app image][5][6]
+[![clock app image][5]][6]
 
 [5]: img/clock.png
 [6]: https://milan-micic.github.io/js-juniors/clock  
