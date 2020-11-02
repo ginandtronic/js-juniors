@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch img</title>
+  <style>
+    * {
+      	box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+      background: rgb(61, 63, 65);
+      color: silver;
+    }
+    .container {
+        margin: auto;
+        width: 80%;
+        text-align: center;
+    }
+    button{
+      background: rgb(53, 56, 56);
+      width: 120px;
+      color: rgb(224, 212, 212);
+      padding: 5px;
+      border-radius: 5px;
+    }
+    button:hover{
+      background: rgb(15, 15, 15);
+      color: rgb(248, 240, 240);
+    }
+    input{
+      width: 120px;
+      height: 25px;
+      margin-bottom: 5px;
+      text-align: center;
+
+    }
+    a {
+      color: rgb(245, 239, 239);
+      text-decoration: none;
+    }   
+    a:visited {
+      color: rgb(245, 239, 239);
+      text-decoration: none;
+    }
+    ul li{
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Fetch random image from Lorem Picsum</h1>
+    <br>
+    <img src="" id="img" />
+    <br>
+    <input type="text" id="imgSize" placeholder="choose size"><br>
+    <button onclick="catchImage()">Get New Image</button>
+    <br><br>
+    <p>
+      Image fetched from <a href="https://picsum.photos/">Lorem Picsum Site</a> <br> default size 320x320 px.
+    </p>
+    <p>Change size in input field then hit Enter or Button. <br>
+    <ul>
+      <li>480 - Give picture in 480 x 480 px</li>
+      <li>480/320 - Give picture in 480 x 320 px</li>
+    </ul>
+    </p>
+    <script>
+      console.log('fetch random image from Lorem Picsum');
+
+      const inp = document.getElementById("imgSize");
+      const img = document.getElementById('img');
+ 
+      catchImage()
+        .then(response => {
+          console.log('yey');
+        })
+        .catch(error => {
+          console.log('error');
+          console.error(error);
+      });
+  
+      // 320/320 size of pics in pixels
+
+      async function catchImage() {
+        let size = inp.value;
+        if (size == "") {
+          size = 320;
+        }
+        const response = await fetch('https://picsum.photos/'+size);
+        const blob = await response.blob();
+        img.src = URL.createObjectURL(blob);
+      }
+
+       inp.addEventListener("keyup", (e)=>{
+          if (e.keyCode === 13) {
+            catchImage();
+          }
+       });
+
+    </script>
+  </div>
+</body>
+
+</html>
