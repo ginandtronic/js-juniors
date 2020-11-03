@@ -7,7 +7,7 @@
 
 From Coding Train - Working With Data & APIs Session [web site](https://thecodingtrain.com/Courses/data-and-apis/1.2-tabular-data.html)  
 
-Original source code by Daniel Shiffman : https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module1/02_fetch_csv  
+Original source code by Daniel Shiffman : [source](https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module1/02_fetch_csv)  
 
 [1]: ../img/csv.png
 [2]: https://milan-micic.github.io/js-juniors/parsingCSV/
