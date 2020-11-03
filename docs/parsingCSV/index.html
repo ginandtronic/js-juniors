@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Fetch and Parse manual CSV</title>
+  <style>
+    table {
+      margin: 0 auto;
+      text-align: center;
+      border-collapse: collapse;
+      border: 1px solid #d4d4d4;
+    }
+    
+    thead {
+      background: rgb(211, 168, 115);
+    }
+
+    tr:nth-child(even) {
+      background: #d4d4d4;
+    }
+    
+    th, td {
+      padding: 10px 30px;
+    }
+    
+    th {
+      border-bottom: 1px solid #d4d4d4;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>GISS Surface Temperature Analysis</h1>
+  <script>
+   
+      // Data from: https://data.giss.nasa.gov/gistemp/
+      // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
+
+    getData();
+
+    async function getData() {
+      // const response = await fetch('testdata.csv');
+      const response = await fetch('ZonAnn.Ts+dSST.csv');
+      const data = await response.text();
+
+      // Manual parsing
+      var allRows = data.split(/\r?\n|\r/);
+      var table = '<table>';
+      for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
+        if (singleRow === 0) {
+          table += '<thead>';
+          table += '<tr>';
+        } else {
+          table += '<tr>';
+        }
+        var rowCells = allRows[singleRow].split(',');
+        for (var rowCell = 0; rowCell < rowCells.length; rowCell++) {
+          if (singleRow === 0) {
+            table += '<th>';
+            table += rowCells[rowCell];
+            table += '</th>';
+          } else {
+            table += '<td>';
+            table += rowCells[rowCell];
+            table += '</td>';
+          }
+        }
+        if (singleRow === 0) {
+          table += '</tr>';
+          table += '</thead>';
+          table += '<tbody>';
+        } else {
+          table += '</tr>';
+        }
+      }
+      table += '</tbody>';
+      table += '</table>';
+      document.body.innerHTML += table
+    }
+  </script>
+</body>
+
+</html>
