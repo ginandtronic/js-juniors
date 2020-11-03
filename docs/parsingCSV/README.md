@@ -3,7 +3,7 @@
 
 [See in action](https://milan-micic.github.io/js-juniors/parsingCSV/)  
 
-[![picture][../img/csv.png][https://milan-micic.github.io/js-juniors/parsingCSV/]  
+[![picture][../img/csv.png]][https://milan-micic.github.io/js-juniors/parsingCSV/]  
 
 From Coding Train Working With Data & APIs Session [web site](https://thecodingtrain.com/Courses/data-and-apis/1.2-tabular-data.html)  
 
