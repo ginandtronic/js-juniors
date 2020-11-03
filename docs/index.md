@@ -50,8 +50,8 @@ Original source code https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/s
 
 ---
 
-# Tabular Data - Working With Data & APIs in JS
-## Fetch CSV file and manual parsing data in table with pure JavaScript
+## 5. Tabular Data - Working With Data & APIs in JS
+### Fetch CSV file and manual parsing data in table with pure JavaScript
 
 [See in action](https://milan-micic.github.io/js-juniors/parsingCSV/)  
 
